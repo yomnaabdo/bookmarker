@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/2899445.png" type="image/x-icon">
+    <title>Bookmarker</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Google Fonts - Pacifico -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Righteous -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+<div class="container mt-5">
+    <header class="text-center ">
+        <h1 class="py-2">Bookmarker</h1>
+    </header>
+    <hr>
+    <section>
+        <h2 class="text-center">
+            <i class="fa fa-bookmark"></i>
+            Bookmark Your Favorite Sites
+        <i class="fa fa-bookmark"></i>
+        </h2>
+        <form action="#" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="siteName"><i class="fa fa-book"></i> Site Name:</label>
+                <input type="text" id="siteName" name="site-name" class="form-control" placeholder="Enter site name" required>
+                <small id="siteNameError" class="form-text text-danger"></small> <!-- Error message for site name -->
+            </div>
+            <div class="form-group">
+                <label for="siteUrl"><i class="fas fa-link"></i> Site URL:</label>
+                <input type="url" id="siteUrl" name="site-url" class="form-control" placeholder="Enter site URL" required>
+                <small id="siteUrlError" class="form-text text-danger"></small> <!-- Error message for site URL -->
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-50" onclick="addBookmark()">Add Bookmark</button>
+            </div>
+        </form>
+    </section>
+    <hr>
+<section class="container mt-5">
+    <table id="bookmarkTable">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Bookmark entries will be added here dynamically -->
+        </tbody>
+    </table>
+</section>
+<!-- Popup Message Container -->
+<div id="popupMessage" class="alert alert-danger alert-dismissible fade show" role="alert"
+    style="display: none; position: fixed; top: 10px; right: 10px; z-index: 9999;">
+    <span id="popupMessageText"></span>
+    <button type="button" class="close" onclick="closePopup()" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+</div>
+    <!-- Bootstrap JavaScript and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
